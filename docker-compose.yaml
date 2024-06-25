@@ -42,7 +42,7 @@ services:
       restart_policy:
         condition: none
     volumes:
-      - ./sites:/home/frappe/frappe-bench
+      - ./erpnext:/home/frappe/frappe-bench
     entrypoint:
       - bash
       - -c
@@ -104,7 +104,7 @@ services:
       PROXY_READ_TIMEOUT: 120
       CLIENT_MAX_BODY_SIZE: 50m
     volumes:
-      - ./sites:/home/frappe/frappe-bench
+      - ./erpnext:/home/frappe/frappe-bench
     ports:
       - "8080:8080"
 
