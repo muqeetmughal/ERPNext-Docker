@@ -11,7 +11,6 @@ services:
       - ./logs:/home/frappe/frappe-bench/logs
       - ./apps:/home/frappe/frappe-bench/apps
       - ./config:/home/frappe/frappe-bench/config
-      - ./patches.txt:/home/frappe/frappe-bench/patches.txt
 
   configurator:
     image: frappe/erpnext:v15.17.3
@@ -42,7 +41,6 @@ services:
       - ./logs:/home/frappe/frappe-bench/logs
       - ./apps:/home/frappe/frappe-bench/apps
       - ./config:/home/frappe/frappe-bench/config
-      - ./patches.txt:/home/frappe/frappe-bench/patches.txt
 
   create-site:
     image: frappe/erpnext:v15.17.3
@@ -54,7 +52,6 @@ services:
       - ./logs:/home/frappe/frappe-bench/logs
       - ./apps:/home/frappe/frappe-bench/apps
       - ./config:/home/frappe/frappe-bench/config
-      - ./patches.txt:/home/frappe/frappe-bench/patches.txt
     entrypoint:
       - bash
       - -c
@@ -120,7 +117,6 @@ services:
       - ./logs:/home/frappe/frappe-bench/logs
       - ./apps:/home/frappe/frappe-bench/apps
       - ./config:/home/frappe/frappe-bench/config
-      - ./patches.txt:/home/frappe/frappe-bench/patches.txt
     ports:
       - "8080:8080"
 
@@ -139,7 +135,6 @@ services:
       - ./logs:/home/frappe/frappe-bench/logs
       - ./apps:/home/frappe/frappe-bench/apps
       - ./config:/home/frappe/frappe-bench/config
-      - ./patches.txt:/home/frappe/frappe-bench/patches.txt
 
   queue-short:
     image: frappe/erpnext:v15.17.3
@@ -156,7 +151,6 @@ services:
       - ./logs:/home/frappe/frappe-bench/logs
       - ./apps:/home/frappe/frappe-bench/apps
       - ./config:/home/frappe/frappe-bench/config
-      - ./patches.txt:/home/frappe/frappe-bench/patches.txt
 
   redis-queue:
     image: redis:6.2-alpine
@@ -187,7 +181,6 @@ services:
       - ./logs:/home/frappe/frappe-bench/logs
       - ./apps:/home/frappe/frappe-bench/apps
       - ./config:/home/frappe/frappe-bench/config
-      - ./patches.txt:/home/frappe/frappe-bench/patches.txt
 
   websocket:
     image: frappe/erpnext:v15.17.3
@@ -202,7 +195,6 @@ services:
       - ./logs:/home/frappe/frappe-bench/logs
       - ./apps:/home/frappe/frappe-bench/apps
       - ./config:/home/frappe/frappe-bench/config
-      - ./patches.txt:/home/frappe/frappe-bench/patches.txt 
   # npm:
   #   image: 'jc21/nginx-proxy-manager:latest'
   #   restart: unless-stopped
